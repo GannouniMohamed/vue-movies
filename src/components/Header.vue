@@ -1,9 +1,14 @@
 <template>
   <header>
     <ul class="sidenav">
-      <li><a class="active" href="/home"> <font-awesome-icon icon="home" /> HOME </a></li>
+      <li v-for="linkItem in navListLinks" :key="linkItem.text">
+        <a class="[ activeTab === linkItem.text ? active : ''  ]" :href="linkItem.href">
+          <font-awesome-icon v-bind:icon="linkItem.icon" /> {{linkItem.text}}
+        </a>
+      </li>
+      <!-- <li ><a class="active" href="/home"> <font-awesome-icon icon="home" /> HOME </a></li>
       <li><a href="/movies"> <font-awesome-icon icon="film" /> MOVIES </a></li>
-      <li><a href="/series"> <font-awesome-icon icon="tv" /> SERIES </a></li>
+      <li><a href="/series"> <font-awesome-icon icon="tv" /> SERIES </a></li> -->
     </ul>
   </header>
 </template>
@@ -11,6 +16,16 @@
 <script>
 export default {
   name: 'Header',
+  data() {
+    return {
+      activeTab: 'HOME',
+      navListLinks: [
+        { isActive: false, href: '/home', icon: 'home', text: 'HOME' },
+        { isActive: false, href: '/movies', icon: 'film', text: 'MOVIES' },
+        { isActive: false, href: '/series', icon: 'tv', text: 'SERIES' },
+      ],
+    };
+  },
 };
 </script>
 
@@ -20,9 +35,16 @@ header {
   height: 56px;
   padding: 0 16px 0 24px;
   color: #ffffff;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  -webkit-box-shadow: 2px 1px 19px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 1px 19px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 1px 19px 0px rgba(0,0,0,0.75);
 }
 
   ul.sidenav {
@@ -36,14 +58,15 @@ header {
 
   ul.sidenav li a {
     display: block;
-    color: #000;
+    color: #897f76;
     padding: 8px 16px;
     text-decoration: none;
   }
   
   ul.sidenav li a.active {
-    background-color: #4CAF50;
-    color: white;
+    color: #FF7E00 !important;
+    border-color: #FF7E00;
+    border-bottom: 3px solid #FF7E00;
   }
 
   ul.sidenav li a:hover:not(.active) {
