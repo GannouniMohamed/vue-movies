@@ -38,7 +38,6 @@ main {
   text-align: center;
   margin-top: 58px;
   min-height: 99vh;
-  background-color: aqua;
 }
 
 header span {
