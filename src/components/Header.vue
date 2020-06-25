@@ -2,13 +2,14 @@
   <header>
     <ul class="sidenav">
       <li v-for="linkItem in navListLinks" :key="linkItem.text">
-        <a class="[ activeTab === linkItem.text ? active : ''  ]" :href="linkItem.href">
+        <a
+          v-bind:class="{ active: activeTab === linkItem.text  }"
+          :href="linkItem.href"
+          v-on:click="setActiveTab(linkItem.text)"
+          >
           <font-awesome-icon v-bind:icon="linkItem.icon" /> {{linkItem.text}}
         </a>
       </li>
-      <!-- <li ><a class="active" href="/home"> <font-awesome-icon icon="home" /> HOME </a></li>
-      <li><a href="/movies"> <font-awesome-icon icon="film" /> MOVIES </a></li>
-      <li><a href="/series"> <font-awesome-icon icon="tv" /> SERIES </a></li> -->
     </ul>
   </header>
 </template>
@@ -25,6 +26,11 @@ export default {
         { isActive: false, href: '/series', icon: 'tv', text: 'SERIES' },
       ],
     };
+  },
+  methods: {
+    setActiveTab(tab) {
+      this.activeTab = tab;
+    },
   },
 };
 </script>
