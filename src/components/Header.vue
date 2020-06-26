@@ -51,6 +51,7 @@ header {
   -webkit-box-shadow: 2px 1px 19px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 1px 19px 0px rgba(0,0,0,0.75);
   box-shadow: 2px 1px 19px 0px rgba(0,0,0,0.75);
+  z-index: 999999;
 }
 
   ul.sidenav {

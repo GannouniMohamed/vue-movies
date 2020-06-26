@@ -3,44 +3,44 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <carousel>
+    <carousel :autoplay="true" :navigationEnabled="true">
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
     </carousel>
     <carousel>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
       <slide>
-        <img width="50%" src="https://m.media-amazon.com/images/M/MV5BNDljZWNmYjItM2I2MC00MTkyLThhMmUtNGUwYzNhOGI4MGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg">
+        <card />
       </slide>
     </carousel>
   </div>
@@ -48,6 +48,7 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
+import Card from './Card';
 
 export default {
   name: 'hello',
@@ -59,6 +60,7 @@ export default {
   components: {
     Carousel,
     Slide,
+    Card,
   },
 };
 </script>
